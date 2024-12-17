@@ -7,7 +7,9 @@ authors = [
     { name = "Albert Sodel", email = "sodelalbert@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "pandas>=2.2.3",
+]
 
 [project.scripts]
 python-cicd = "python_cicd:main"
