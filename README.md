@@ -20,11 +20,13 @@ Project demonstrates CICD pipeliens configuration using brand new tools
    ```
 3.
 
-
 # UV commands reference
 
 `uv init --package ` - initialize uv project with packaging
-
 `uv.lock` - file used to synchronize dependencies amongst deployments
+`uvx ruff format .` - format code in the project to be consistent
+`ruff check --select I --fix` - fix import order, currently ruff format is not taking
+for an account import formatting
+`uvx ruff format --check .` - check code formatting in the project
 
 
