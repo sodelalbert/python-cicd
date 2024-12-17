@@ -1,7 +1,7 @@
 name: Python Code Quality
 on: [ push ]
 jobs:
-  uv.lock file validation:
+  uv.lock_file_validation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
