@@ -30,3 +30,4 @@ for an account import formatting
 `uvx ruff format --check .` - check code formatting in the project
 
 
+`uv run pytest tests -v` - run pytest from uv
