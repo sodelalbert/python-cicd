@@ -31,7 +31,8 @@ dev-dependencies = [
 mypy_path = "src"
 
 [tool.pytest.ini_options]
-addopts = "-v --durations=0 -n auto"
+#addopts = "-v --durations=0 -n auto" # paralell running of tests
+addopts = "-v --durations=0"
 testpaths = [
     "tests"
 ]
