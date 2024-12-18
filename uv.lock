@@ -211,25 +211,23 @@ name = "python-cicd"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "black" },
     { name = "pandas" },
 ]
 
 [package.dev-dependencies]
 dev = [
+    { name = "black" },
     { name = "mypy" },
     { name = "pyright" },
     { name = "pytest" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "black", specifier = ">=24.10.0" },
-    { name = "pandas", specifier = ">=2.2.3" },
-]
+requires-dist = [{ name = "pandas", specifier = ">=2.2.3" }]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "black", specifier = ">=24.10.0" },
     { name = "mypy", specifier = ">=1.13.0" },
     { name = "pyright", specifier = ">=1.1.390" },
     { name = "pytest", specifier = ">=8.3.4" },
