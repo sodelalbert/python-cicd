@@ -81,3 +81,9 @@ Mypy is sometimes complaining about Pycharm configuration
   use command line.
 
   Execution possible with command `uv run pytest` 
+
+* Pytest pretty output with `pytest-sugar` plugin
+  ```
+  [tool.pytest.ini_options]
+  addopts = "-v --durations=0 --color=yes"
+  ```

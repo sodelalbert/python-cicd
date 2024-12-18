@@ -16,4 +16,4 @@ def test_addition(a: int, b: int, expected: int) -> None:
 
 
 def test_invalid_addition() -> None:
-    assert 5 != add(1, 2)
+    assert 5 == add(1, 2)
