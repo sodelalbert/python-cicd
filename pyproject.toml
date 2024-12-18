@@ -23,8 +23,6 @@ dev-dependencies = [
     "black>=24.10.0",
     "mypy>=1.13.0",
     "pyright>=1.1.390",
-    "pytest-sugar>=1.0.0",
-    "pytest-xdist>=3.6.1",
     "pytest>=8.3.4",
 ]
 
@@ -32,8 +30,8 @@ dev-dependencies = [
 mypy_path = "src"
 
 [tool.pytest.ini_options]
-#addopts = "-v --durations=0 -n auto" # paralell running of tests
-addopts = " -ra -v --durations=0 --color=yes"
+#addopts = "-v --durations=0 -n auto --color=yes" # paralell running of tests
+addopts = " -v"
 testpaths = [
     "tests"
 ]
