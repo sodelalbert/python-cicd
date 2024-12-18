@@ -50,7 +50,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: [ linting, ruff_formatting, typing_mypy, typing_pyright ]
+    needs: [ linting, black_formatting, ruff_formatting, typing_mypy, typing_pyright ]
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
@@ -58,7 +58,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: [ linting, black_formatting, typing_mypy, typing_pyright ]
+    needs: [ linting, black_formatting, ruff_formatting, typing_mypy, typing_pyright ]
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
