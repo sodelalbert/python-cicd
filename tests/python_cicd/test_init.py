@@ -1,15 +1,6 @@
 from python_cicd.add import add
 
 
-
-
-
-
-
-
-
-
-
 def test_generate_list() -> None:
     import time
 
