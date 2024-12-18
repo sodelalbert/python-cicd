@@ -5,7 +5,7 @@ Project demonstrates CICD pipeliens configuration using brand new tools
 # Installation
 
 1. Clone project from repository
-2. Installation of uv using manual: [Installing uv
+2. Installation of uv using manual: [Installing uv](https://uv.astral.sh/docs/installation)
 
    MacOS and Linux
 
@@ -18,7 +18,7 @@ Project demonstrates CICD pipeliens configuration using brand new tools
    ```powershell
    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
    ```
-3. Synchronize reposotory with uv
+3. Synchronize repository with uv
 
    ```bash
    uv sync
