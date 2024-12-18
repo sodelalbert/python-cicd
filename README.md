@@ -48,12 +48,16 @@ lint.extend-select = ["D"]
 
 # Mypy configuration
 
-Mypy is sometimes complaining about
-
-# Pycharm configuration
+Mypy is sometimes complaining about Pycharm configuration
 
 * Pycharm is not recognising package - Mark `src` directory as source root.
-  <br></br>
+  
   `Skipping analyzing "python_cicd": module is installed, but missing library stubs or py.typed marker  [import-untyped]`.
-  <br></br>
-  To resolve this issue add `py.typed` file to the `src` / library directory  or cosider using `pyright`.
+
+  * Indicate to mypy src location (library code) file path in `pyproject.toml` file.
+  ```
+  [tool.mypy]
+  mypy_path = "src"
+  ```
+
+  * To resolve this issue add `py.typed` file to the `src` / library directory  or cosider using `pyright`.
