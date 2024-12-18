@@ -4,26 +4,35 @@ Project demonstrates CICD pipeliens configuration using brand new tools
 
 # Installation
 
-1. Clone project from repository
-2. Installation of uv using
-   manual: [Installing uv](https://uv.astral.sh/docs/installation)
+Clone project from repository.
 
-   MacOS and Linux
+Installation of uv using manual: [Installing uv](https://uv.astral.sh/docs/installation)
 
-   ```bash
-   curl -LsSf https://astral.sh/uv/install.sh | sh
-   ```
+MacOS and Linux
 
-   Windows
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
-   ```powershell
-   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-   ```
-3. Synchronize repository with uv
+Windows
 
-   ```bash
-   uv sync
-   ```
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+# Requirements installation
+
+Install requirements and configure python interpreter using uv sync command.
+
+```bash
+uv sync
+```
+
+# Testing
+
+```bash
+uv run pytest
+```
 
 # UV commands reference
 
@@ -80,7 +89,7 @@ Mypy is sometimes complaining about Pycharm configuration
   PyCharm execution is failing - not recognising "-n" option. To run tests in parallel
   use command line.
 
-  Execution possible with command `uv run pytest` 
+  Execution possible with command `uv run pytest`
 
 * Pytest pretty output with `pytest-sugar` plugin
   ```
