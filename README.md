@@ -5,7 +5,8 @@ Project demonstrates CICD pipeliens configuration using brand new tools
 # Installation
 
 1. Clone project from repository
-2. Installation of uv using manual: [Installing uv](https://uv.astral.sh/docs/installation)
+2. Installation of uv using
+   manual: [Installing uv](https://uv.astral.sh/docs/installation)
 
    MacOS and Linux
 
@@ -40,7 +41,7 @@ for an account import formatting.
 * If you like to require docstring add following configuration to `pyproject.toml` file.
 
 *To be fixed*
- 
+
 ```
 [tool.ruff]
 lint.extend-select = ["D"]
@@ -51,13 +52,32 @@ lint.extend-select = ["D"]
 Mypy is sometimes complaining about Pycharm configuration
 
 * Pycharm is not recognising package - Mark `src` directory as source root.
-  
+
   `Skipping analyzing "python_cicd": module is installed, but missing library stubs or py.typed marker  [import-untyped]`.
 
-  * Indicate to mypy src location (library code) file path in `pyproject.toml` file.
+    * Indicate to mypy src location (library code) file path in `pyproject.toml` file.
   ```
   [tool.mypy]
   mypy_path = "src"
   ```
 
-  * To resolve this issue add `py.typed` file to the `src` / library directory  or cosider using `pyright`.
+    * To resolve this issue add `py.typed` file to the `src` / library directory or
+      cosider using `pyright`.
+
+# Pytest configuration
+
+* Indicate to mypy src location (library code) file path in `pyproject.toml` file.
+  ```
+  [tool.mypy]
+  mypy_path = "src"
+  ```
+
+* Pytest parallel running with xdist plugin
+  ```
+  [tool.pytest.ini_options]
+  addopts = "-v --durations=0 -n auto"
+  ``` 
+  PyCharm execution is failing - not recognising "-n" option. To run tests in parallel
+  use command line.
+
+  Execution possible with command `uv run pytest` 

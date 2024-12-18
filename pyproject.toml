@@ -23,8 +23,15 @@ dev-dependencies = [
     "black>=24.10.0",
     "mypy>=1.13.0",
     "pyright>=1.1.390",
+    "pytest-xdist>=3.6.1",
     "pytest>=8.3.4",
 ]
 
 [tool.mypy]
 mypy_path = "src"
+
+[tool.pytest.ini_options]
+addopts = "-v --durations=0 -n auto"
+testpaths = [
+    "tests"
+]
