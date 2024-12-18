@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "black>=24.10.0",
     "pandas>=2.2.3",
 ]
 
@@ -24,3 +25,6 @@ dev-dependencies = [
     "pyright>=1.1.390",
     "pytest>=8.3.4",
 ]
+
+[tool.mypy]
+mypy_path = "src"

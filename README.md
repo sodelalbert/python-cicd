@@ -26,23 +26,34 @@ Project demonstrates CICD pipeliens configuration using brand new tools
 
 # UV commands reference
 
-`uv init --package ` - initialize uv project with packaging.  
-`uv.lock` - file used to synchronize dependencies amongst deployments.  
-`uvx ruff format .` - format code in the project to be consistent.  
+`uv init --package ` - initialize uv project with packaging.
+`uv.lock` - file used to synchronize dependencies amongst deployments.
+`uvx ruff format .` - format code in the project to be consistent.
 `ruff check --select I --fix` - fix import order, currently ruff format is not taking
-for an account import formatting.  
-`uvx ruff format --check .` - check code formatting in the project.   
+for an account import formatting.
+`uvx ruff format --check .` - check code formatting in the project.
 
-`uv run pytest tests -v` - run pytest from uv.   
+`uv run pytest tests -v` - run pytest from uv.
+
+# Ruff configuration
+
+* If you like to require docstring add following configuration to `pyproject.toml` file.
+
+*To be fixed*
+ 
+```
+[tool.ruff]
+lint.extend-select = ["D"]
+```
 
 # Mypy configuration
 
-Mypy is sometimes complaining about 
-
+Mypy is sometimes complaining about
 
 # Pycharm configuration
+
 * Pycharm is not recognising package - Mark `src` directory as source root.
-<br></br>
-   `Skipping analyzing "python_cicd": module is installed, but missing library stubs or py.typed marker  [import-untyped]`. 
-<br></br>
-   To resolve this issue add `py.typed` file to the `src` / library directory  or cosider using `pyright`.
+  <br></br>
+  `Skipping analyzing "python_cicd": module is installed, but missing library stubs or py.typed marker  [import-untyped]`.
+  <br></br>
+  To resolve this issue add `py.typed` file to the `src` / library directory  or cosider using `pyright`.
