@@ -2,6 +2,11 @@
 
 Project demonstrates CICD pipeliens configuration using brand new tools
 
+# TODO List
+
+- [ ] Add more robust pytest configuration.
+- [ ] Ensure docstring documentation is checked by ruff or mypy.
+
 # Installation
 
 Clone project from repository.
