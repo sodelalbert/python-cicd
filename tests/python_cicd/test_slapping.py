@@ -1,7 +1,6 @@
 # Importing this way is possible because we created installable package with setuptools.
 import pytest
-
-from python_cicd.slap_that_like_button import slap_many, LikeState
+from python_cicd.slap_that_like_button import LikeState, slap_many
 
 
 def test_empty_slap():
